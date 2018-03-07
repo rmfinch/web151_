@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+</head>
+
+<body>
+	<canvas id="canvas" width="200"height="200"></canvas>
+	
+	<script>
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	/*for (var i = 0; i < 8; i++) {
+	ctx.fillRect(i * 10, i * 10, 10, 10);
+	}
+	*/
+	ctx.fillStyle = "Blue";
+	//head
+	ctx.fillRect(100, 0, 50, 50);
+	//neck
+	ctx.fillRect(120, 50, 10, 30);
+	//arms
+	ctx.fillRect(75, 80, 100, 10);
+	//body
+	ctx.fillRect(95, 90, 60, 60);
+	//left leg
+	ctx.fillRect(95, 100, 10, 100);
+	//right leg
+	ctx.fillRect(145, 100, 10, 100);
+	</script>
+</body>
+</html>
