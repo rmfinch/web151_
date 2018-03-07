@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snowman</title>
+</head>
+
+<body>
+	<canvas id="canvas" width="400" height="400"></canvas>
+	
+	<script>
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	var circle = function (x, y, radius, fillCircle) {
+	ctx.beginPath();
+	ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+	if (fillCircle) {
+	ctx.fill();
+	}
+	else{
+	ctx.stroke();
+	}
+	};
+
+	ctx.lineWidth = 4;
+	
+	//head
+	circle(100, 100, 20);
+	
+	//body
+	circle(100, 150, 30);
+	
+	//eyes
+	ctx.fillStyle = "black";
+	circle(93, 95, 5, true); 
+	
+	ctx.fillStyle = "black";
+	circle(108, 95, 5, true);
+	
+	//carrot nose
+	ctx.fillStyle = "orange";
+	circle(100, 105, 4, true);
+	
+	//buttons
+	ctx.fillStyle = "black";
+	circle(100, 135, 4, true);
+	circle(100, 150, 4, true);
+	circle(100, 165, 4, true);
+	
+	</script>
+</body>
+</html>
